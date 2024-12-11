@@ -1,0 +1,12 @@
+.tab {
+  &__buttons {
+    // border: 1px solid white;
+  }
+  &__button {
+    padding: 2rem 1rem;
+    border: 1px solid white;
+  }
+  &__txt {
+    display: none;
+  }
+}
