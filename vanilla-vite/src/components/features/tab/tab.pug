@@ -1,10 +1,24 @@
+
+mixin Buttons()
+  -
+    const buttons = [
+      {txt: 'Кнопка 1', data: 'w1', className: 'tab__button active'},
+      {txt: 'Кнопка 2', data: 'w1', className: 'tab__button'},
+      {txt: 'Кнопка 3', data: 'w1', className: 'tab__button'},
+    ]
+  -
+  each item in buttons
+    button(type='button' class=item.className data-toggle='w1') #{item.txt}
+
+//- --------------------------------------------------------------------------
+
+
+
 mixin Tab()
   .tab 
     .tab__buttons 
-      button(type='button' class='tab__button') Кнопка 1
-      button(type='button' class='tab__button') Кнопка 2
-      button(type='button' class='tab__button') Кнопка 3
+      +Buttons()
     .tab__contents 
-      p.tab__txt Контент 1
-      p.tab__txt Контент 2
-      p.tab__txt Контент 3
+      p(class='tab__txt active' data-content='w1' id='w1') Контент 1
+      p(class='tab__txt' data-content='w2' id='w2') Контент 2
+      p(class='tab__txt' data-content='w3' id='w3') Контент 3

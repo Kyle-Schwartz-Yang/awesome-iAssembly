@@ -1,12 +1,16 @@
 .tab {
-  &__buttons {
-    // border: 1px solid white;
-  }
   &__button {
     padding: 2rem 1rem;
     border: 1px solid white;
+    &.active {
+      background-color: white;
+      color: black;
+    }
   }
   &__txt {
     display: none;
+    &.active {
+      display: block;
+    }
   }
 }
