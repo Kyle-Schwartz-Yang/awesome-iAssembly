@@ -1,13 +1,6 @@
 
-mixin Buttons()
-  -
-    const buttons = [
-      {txt: 'Кнопка 1', data: 'w1', className: 'tab__button active'},
-      {txt: 'Кнопка 2', data: 'w2', className: 'tab__button'},
-      {txt: 'Кнопка 3', data: 'w3', className: 'tab__button'},
-    ]
-  -
-  each item in buttons
+mixin Buttons(props)
+  each item in props
     button(type='button' class=item.className data-toggle=item.data) #{item.txt}
 
 //- --------------------------------------------------------------------------
@@ -15,9 +8,16 @@ mixin Buttons()
 
 
 mixin Tab()
+  -
+    const buttons = [
+      {txt: 'Кнопка 1', data: 'w1', className: 'tab__button active'},
+      {txt: 'Кнопка 2', data: 'w2', className: 'tab__button'},
+      {txt: 'Кнопка 3', data: 'w3', className: 'tab__button'},
+    ]
+  -
   .tab 
     .tab__buttons 
-      +Buttons()
+      +Buttons(buttons)
     .tab__contents 
       p(class='tab__txt active' data-content='w1' id='w1') Контент 1
       p(class='tab__txt ' data-content='w2' id='w2') Контент 2
