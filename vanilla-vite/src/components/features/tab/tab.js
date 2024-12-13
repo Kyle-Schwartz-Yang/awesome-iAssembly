@@ -32,23 +32,19 @@ export class Tabbed {
       return;
     }
 
-    if (this.buttons.length > 0) {
-      this.handleToggleButton(this.buttons);
-    }
-    return;
+    this.handleToggleButton();
   }
 
-  handleToggleButton(buttons) {
-    buttons.forEach((btn) => {
+  handleToggleButton() {
+    this.buttons.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const buttonAttribut = btn.dataset.toggle;
 
         if (!btn.classList.contains("active")) {
           this.removeActiveClases();
           btn.classList.add("active");
+          this.setActiveContent(buttonAttribut);
         }
-
-        this.setActiveContent(buttonAttribut);
       });
     });
   }
@@ -60,9 +56,9 @@ export class Tabbed {
       if (contentAttribut.includes(buttonAttribut) || !buttonAttribut) {
         if (!content.classList.contains("active")) {
           content.classList.add("active");
+        } else {
+          content.classList.add("active");
         }
-      } else {
-        content.classList.remove("active");
       }
     });
   }
