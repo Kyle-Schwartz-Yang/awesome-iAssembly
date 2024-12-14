@@ -1,5 +1,9 @@
 import { initTab } from "../features/tab/initTab";
 
+/**
+ * @param
+ */
+
 export const initApp = () => {
   initTab({
     tab: document.querySelector(".tab"),
