@@ -20,10 +20,27 @@
   npm run dev
 ```
 
-### Additionally / Додатково
+## Additionally (NPM) ⚡
+
+> Додаткове встановлення пакетів для дручного користування.
+
+### Preprocessor 👁️
 
 ```bash
-  npm i -D vite-plugin-inspect # INSPECT
-  npm i -D vite-plugin-pug # PUG
-  npm install -D sass # SCSS
+  🧩 npm i -D vite-plugin-pug # PUG
+  🧩 npm install -D sass # SCSS
+```
+
+### Optimizer images 👁️
+
+```bash
+  🧩 search NPM: vite-plugin-image-optimizer # Optimizer images
+  🧩 npm install sharp --save-dev # add for
+  🧩 npm install svgo --save-dev # add for
+```
+
+### Додатково 👁️
+
+```bash
+  🧩 npm i -D vite-plugin-inspect # INSPECT
 ```
