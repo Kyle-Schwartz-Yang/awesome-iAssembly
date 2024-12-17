@@ -1,0 +1,13 @@
+@use "../../shared/settings/scss/mixins/_mixins.scss" as mix;
+
+.footer {
+  padding: 30px 15px;
+  background-color: black;
+  color: #fff;
+  text-transform: uppercase;
+  @include mix.flexbox(flex, center, center);
+}
+
+.item {
+  border: 1px solid green;
+}

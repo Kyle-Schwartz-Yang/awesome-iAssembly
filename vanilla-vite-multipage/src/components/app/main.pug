@@ -1,0 +1,16 @@
+
+
+include ../widgeds/header/_header.pug
+include ../widgeds/footer/_footer.pug
+
+
+
+.wrapper
+  +Header()
+  main.main
+    .navigations 
+      h1(style='margin-bottom: 20px; font-size: 30px') Index
+      a.category(href="./src/components/pages/about/" style='display: block; margin-bottom: 10px')  About
+      a.category(href="./src/components/pages/contacts/" style='display: block; margin-bottom: 10px')  Contacts 
+      a.category(href="./src/components/pages/login/" style='display: block; margin-bottom: 10px')  Login
+  +Footer()
