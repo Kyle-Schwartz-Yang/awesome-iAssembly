@@ -1,0 +1,16 @@
+// -----------------------------------Config project
+@use "../shared/settings/scss/config/_config.scss";
+// // -----------------------------------Config project
+
+/*---------------------------------------Helper Code*/
+@use "../shared/settings/scss/variables/_variables.scss" as *;
+@use "../shared/settings/scss/mixins/_mixins.scss" as *;
+/*---------------------------------------Helper Code*/
+
+/*---------------------------------------Components Style*/
+@use "../widgeds/footer/_footer.module.scss";
+@use "../widgeds/header/_header.scss";
+
+/*---------------------------------------Components Style*/
+
+// ! SETTING PROJECT

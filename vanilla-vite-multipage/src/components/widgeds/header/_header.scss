@@ -1,0 +1,10 @@
+@use "../../shared/settings/scss/mixins/_mixins.scss" as *;
+@use "../../shared/settings/scss/variables/_variables.scss" as *;
+
+.header {
+  padding: 30px 15px;
+  background-color: $black;
+  text-transform: uppercase;
+  color: white;
+  @include flexbox(flex, center, center);
+}
