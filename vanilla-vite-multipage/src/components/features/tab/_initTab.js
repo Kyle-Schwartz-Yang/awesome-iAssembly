@@ -1,4 +1,4 @@
-import { Tabbed } from "./tab";
+import { Tabbed } from "./_tab";
 
 /**
  * Ініціалізація табів з переданою конфігурацією.
