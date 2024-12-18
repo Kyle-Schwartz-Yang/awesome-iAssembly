@@ -1,0 +1,20 @@
+
+include ../../../widgeds/footer/_footer.pug
+include ../../../widgeds/header/_header.pug
+
+
+.wrapper
+  block header 
+    //-intall HEADER 
+    +Header()
+    
+    
+  main.main  
+    block content
+      //- Заменить содержимое
+      h1 Динамическое содержимое:
+
+  block footer
+    //-intall HEADER 
+    +Footer()  
+

@@ -11,9 +11,30 @@ export default defineConfig({
     }),
     ViteImageOptimizer(),
   ],
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src/assets/"),
+    },
+  },
+
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+        login: path.resolve(
+          __dirname,
+          "./src/components/pages/login/index.html"
+        ),
+        about: path.resolve(
+          __dirname,
+          "./src/components/pages/about/index.html"
+        ),
+        contact: path.resolve(
+          __dirname,
+          "./src/components/pages/contacts/index.html"
+        ),
+      },
     },
   },
 });

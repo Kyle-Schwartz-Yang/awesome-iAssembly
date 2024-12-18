@@ -1,0 +1,41 @@
+// ------------------------------------------
+@use "../scss/config/_config.scss";
+// ------------------------------------------
+
+//--------------------------------------------
+@use "../../../widgeds/footer/_footer.scss";
+@use "../../../widgeds/header/_header.scss";
+//-------------------------------------------
+
+// -------------------------------------------
+@use "../scss/variables/_variables.scss" as *;
+@use "../scss/mixins/_mixins.scss" as *;
+
+html {
+  font-size: $f-size-rem;
+}
+
+body {
+  background-color: #1e1f35;
+  font-family: $font-face;
+  font-size: $f-size-default;
+  color: $white;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  // @include flexbox(flex, null, null, column, null, null);
+  @include flexbox(flex, null, null, column, null, null);
+}
+
+[class*="__container"] {
+  max-width: 123rem;
+  margin: 0 auto;
+  padding: 0px 1.5rem;
+}
+
+.main {
+  flex: 1 0 auto; // (flex-grow:0; flex-shrink:1; flex-basis:auto;)
+  // min-height: 100vh; //? [Fix Scrollbar MultiPage] ?\\
+}
