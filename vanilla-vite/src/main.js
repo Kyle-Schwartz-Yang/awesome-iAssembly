@@ -1,13 +1,13 @@
 import "./components/app/app.scss";
-
+// ------------------------------------------
 import { initApp } from "./components/app/app";
 
 document.addEventListener("DOMContentLoaded", () => {
   initApp();
 });
 
-import viteLogo from "@/body.png";
+import logo from "@/vite.svg";
 
-const image = (document.querySelector("#image").src = viteLogo);
-
-console.log(image);
+const imagesLogo = document.querySelector("#image");
+imagesLogo.src = logo;
+console.log(imagesLogo);
