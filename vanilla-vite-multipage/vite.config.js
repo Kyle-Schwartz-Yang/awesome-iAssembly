@@ -1,6 +1,6 @@
+import { defineConfig } from "vite";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import pugPlugin from "vite-plugin-pug";
-import { defineConfig } from "vite";
 import path from "path";
 
 export default defineConfig({

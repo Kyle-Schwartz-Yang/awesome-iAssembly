@@ -4,10 +4,17 @@ import { defineConfig } from "vite";
 import path from "path";
 
 export default defineConfig({
-  plugins: [pugPlugin(), ViteImageOptimizer()],
+  plugins: [
+    pugPlugin({
+      pretty: true, // Для зручного читання HTML
+      locals: {}, // Передача змінних у Pug
+    }),
+    ViteImageOptimizer(),
+  ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src/assets"),
+      "@": path.resolve(__dirname, "./src/assets/"),
+      "@widgeds": path.resolve(__dirname, "./src/components/widgeds/"),
     },
   },
 });
